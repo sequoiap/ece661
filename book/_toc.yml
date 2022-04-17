@@ -1,0 +1,47 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Part One
+  numbered: true
+  chapters:
+  - file: content/part1/maxwell
+  - file: content/part1/geometrical
+  - file: content/part1/prisms
+  - file: content/part1/lenses
+  - file: content/part1/cameras
+  - file: content/part1/principalplanes
+  - file: content/part1/depthoffocus
+  - file: content/part1/zoomlens
+  - file: content/part1/pupils
+- caption: Part Two
+  numbered: true
+  chapters:
+  - file: content/part2/radiometry
+  - file: notebooks
+  - file: markdown-notebooks
+- caption: Part Three
+  numbered: true
+  chapters: 
+  - file: content/part3/diffraction
+  - file: content/part3/fraunhofer
+  - file: content/part3/gratings
+  - file: content/part3/spectrometers
+  - file: content/part3/telescopes
+  - file: content/part3/opticalprocessing
+  - file: content/part3/lensperformance
+- caption: Problems
+  numbered: false
+  chapters: 
+  - file: content/problems/geometrical
+  - file: content/problems/lenses
+  - file: content/problems/camera
+  - file: content/problems/principalplanes
+  - file: content/problems/zoomlens
+  - file: content/problems/laserdrilling
+- caption: Reference
+  numbered: false
+  chapters: 
+  - file: content/reference/transforms
