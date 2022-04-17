@@ -39,6 +39,13 @@ parts:
   - file: content/problems/lenses
   - file: content/problems/camera
   - file: content/problems/principalplanes
+  - file: content/problems/humaneye
+  - file: content/problems/radiometry
+  - file: content/problems/fields
+  - file: content/problems/diffraction
+  - file: content/problems/gratings
+  - file: content/problems/spectrometry
+  - file: content/problems/lensperformance
   - file: content/problems/zoomlens
   - file: content/problems/laserdrilling
 - caption: Reference

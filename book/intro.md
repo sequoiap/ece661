@@ -1,11 +1,13 @@
-# Welcome to your Jupyter Book
+# Welcome to ECEN 661
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This site contains the course notes, assignments, and selected solutions for
+ECEN 661: Applied Electromagnetics and Optics.
 
-Check out the content pages bundled with this sample book to see more.
+This course was created by Dr. Stephen Schultz at [Brigham Young University](https://ece.byu.edu).
+Content is Copyright Ⓒ 2022, Dr. Stephen Schultz.
 
 ```{tableofcontents}
 ```
+
+*Credits*  
+Course website created and maintained by Sequoia Ploeg.

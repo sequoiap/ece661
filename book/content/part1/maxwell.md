@@ -407,12 +407,11 @@ A wavefront is a surface of equal phase. For a plane wave it is a plane and for
 a spherical wave it is a sphere. The separation between wavefronts is the
 wavelength of the optical signal.
 
-```{admonition} Definition
-**Huygens Principle** (or, the Huygens-Fresnel prinicple) states that each 
-point on a wave front generates a spherical wave. The envelope of these 
-secondary waves constitutes a new wavefront. Their superposition constitutes 
-the wave in another plane.
-```
+Huygens Principle 
+: (or, the Huygens-Fresnel prinicple) states that each point
+  on a wave front generates a spherical wave. The envelope of these secondary
+  waves constitutes a new wavefront. Their superposition constitutes the wave in
+  another plane.
 
 ## Geometrical Optics
 

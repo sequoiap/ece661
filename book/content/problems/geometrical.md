@@ -6,9 +6,9 @@
    \infty)$ Gauss’s law becomes $(\nabla \cdot \vec{E} = 0)$.
 
 2. A lifeguard is standing at the point A $(0, 0)$ and a person is drowning at
-   the point B $(x_0, y_0)$.  The lifeguard has a running speed of $v_1$ and
-   swimming speed of $v_2$ $(v_1 \gt v_2)$. What is the quickest path for the
-   lifeguard to take?  
+   the point B $(x_0, y_0)$, as shown in {numref}`pool-fig`.  The lifeguard has
+   a running speed of $v_1$ and swimming speed of $v_2$ $(v_1 \gt v_2)$. What
+   is the quickest path for the lifeguard to take?  
 
    ```{figure} ../../images/problems/pool.png
    ---
@@ -25,24 +25,24 @@
 
 6. Book Problem 2.4
 
-7. A ray is incident onto a 45-45-90 prism at an angle of $20^\circ$ (see Figure 2). If the
-   two legs are mirror coated, what is the direction of the beam after passing
-   through the prism?
+7. A ray is incident onto a 45-45-90 prism at an angle of $20^\circ$ (see
+   {numref}`prism-fig`). If the two legs are mirror coated, what is the
+   direction of the beam after passing through the prism?
 
    ```{figure} ../../images/problems/prism.png
    ---
    name: prism-fig
    ---
-   45-45-90 prism.
+   A 45-45-90 prism.
    ```
 
-8. A beam is refracted through a prism shown in Figure 3. 
+8. A beam is refracted through a prism shown in {numref}`prism2-fig`. 
 
    ```{figure} ../../images/problems/prism2.png
    ---
    name: prism2-fig
    ---
-   A prism.
+   A 30-60-90 prism.
    ```
    
    a. What is the ratio of the beam sizes ($W_2 / W_1$)?  
@@ -54,7 +54,7 @@
 
 **Solutions**
 
-Problem 1
+*Problem 1*
 
 ```{toggle}
 Some hidden toggle content!
@@ -62,7 +62,7 @@ Some hidden toggle content!
 Great!
 ```
 
-Problem 2
+*Problem 2*
 
 ```{toggle}
 Some hidden toggle content!
@@ -70,7 +70,7 @@ Some hidden toggle content!
 Great!
 ```
 
-Problem 3
+*Problem 3*
 
 ```{toggle}
 Some hidden toggle content!

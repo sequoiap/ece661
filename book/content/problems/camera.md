@@ -42,7 +42,7 @@
    biconcave with a focal length of $f=-20mm$ and a diameter of 40mm.  The
    separation of the lenses is 20mm. A 10mm aperture is placed 30mm in front of
    the first lens. A 20mm tall object is located 60mm in front of the first
-   lenses. Figure 1 shows a scale drawing of the optical system.  Assume that
+   lenses. {numref}`aperture-fig` shows a scale drawing of the optical system.  Assume that
    all light that does not pass through each lens is blocked. This aperture is
    shown as the black box around the lens system. Assume that the paraxial
    approximation is valid.
@@ -57,7 +57,7 @@
    <ol type="a">
       <li>What is the location of the image?</li>
       <li>What is the size of the image?</li>
-      <li>Draw rays on Figure 1 that show the maximum extent of area used for each lens.</li>
+      <li>Draw rays on {numref}`aperture-fig` that show the maximum extent of area used for each lens.</li>
       <li>What fractional height of each lens has optical light passing through it that contributes to the image?</li>
    </ol>
 

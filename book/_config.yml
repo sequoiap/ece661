@@ -43,6 +43,7 @@ parse:
     - amsmath
     - colon_fence
     - dollarmath
+    - deflist
     - linkify
     - substitution
     - tasklist

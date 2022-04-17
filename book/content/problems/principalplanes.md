@@ -24,10 +24,12 @@
    combination and the location of both principal planes.
 
 4. (Problem 4.23 parts a and b only) A thin lens of F=4cm is followed by
-   another thin lens of F=2cm. The distance between the lenses is 4cm.  (a)
-   Determine the location of both principal planes and the total system power.
-   (b) Using the principal planes, determine the image location and
-   magnification for an object located 8cm in front of the first lens.
+   another thin lens of F=2cm. The distance between the lenses is 4cm. 
+   
+   <ol type="a">
+      <li>Determine the location of both principal planes and the total system power.</li>
+      <li>Using the principal planes, determine the image location and magnification for an object located 8cm in front of the first lens.</li>
+   </ol>
 
 5. The prescription of a Cooke Triplet is
 
