@@ -52,3 +52,4 @@ parts:
   numbered: false
   chapters: 
   - file: content/reference/transforms
+  - file: content/reference/glossary

@@ -119,7 +119,7 @@ Rays are simply used to characterize the propagation of a wavefront.
 Even though rays are not actually narrow beams of light, the can still be used
 to analyze irradiance by looking at ray density.
 
-```{admonition} Example
+```{admonition} Example: Irradiance
 
 A line source has a power of $P = 1 W/m$. A linear detector with a width of 
 $D = 1 mm$ is placed $R = 1 m$ away from the line source. How much power is 
@@ -158,9 +158,8 @@ $$
     P = (1 W) \frac{10^{-3}}{2 \pi} = 159.2 \mu W
 $$
 
-The concept of calculating irradiance using ray tracing enables irradiance calcualtion for arbitrary
-shapes and optical systems.
-
+The concept of calculating irradiance using ray tracing enables irradiance 
+calculation for arbitrary shapes and optical systems.
 ```
 
 ## Basic Postulates of Geometrical Optics
