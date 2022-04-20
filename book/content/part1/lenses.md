@@ -96,8 +96,8 @@ $$
     \frac{n'}{S_i} - \frac{n}{S_o} = (n' - n) \frac{1}{R} \\
 $$ (conjugate_equation)
 
-where $1 / R \equiv C$ is the curvature. {eq}`conjugate_equation` is known as
-the **conjugate equation**.
+where $1 / R \equiv C$ is the curvature. {eq}`conjugate_equation` is the 
+conjugate equation.
 
 ## Thin Lens
 
@@ -256,8 +256,11 @@ Let's calculate the ABCD matrices of some common components.
 
 Rays travel in straight lines.
 
-```{margin} Optional Title!
-We're going to put a figure here! It'll look great.
+```{figure} ../../images/part1/freespacepropogation.png
+---
+name: freespacepropogation-fig
+---
+Free space propogation.
 ```
 
 $$
@@ -275,8 +278,11 @@ $$
 
 ### Refraction at a Planar Boundary
 
-```{margin} Optional Title!
-We're going to put a figure here! It'll look great.
+```{figure} ../../images/part1/refractionplanar.png
+---
+name: refractionplanar-fig
+---
+Refraction at a planar boundary.
 ```
 
 $$
@@ -358,7 +364,8 @@ $$
 The first element encountered by the ray is the last matrix in the 
 multiplication (since matrix multiplication is performed right to left).
 
-```{admonition} Example: Multiple lenses
+<div class="admonition note" name="html-admonition">
+<p class="admonition-title">Example: Multiple lenses</p>
 
 Find the image location and magnification.
 
@@ -369,6 +376,13 @@ Find the image location and magnification.
 
 **Solution**
 
+```{figure} ../../images/part1/multiplelensesex1.png
+---
+name: multipleelementsex1-fig
+---
+First lens analysis.
+```
+
 Using the thin lens equations,
 
 $$
@@ -376,6 +390,13 @@ $$
     S_{i1} &= \left( \frac{1}{10} - \frac{1}{30} \right) ^{-1} = 15 \\
     M_1 &= - \frac{S_{i1}}{S_{o1}} = - \frac{15}{30} = - \frac{1}{2}
 $$
+
+```{figure} ../../images/part1/multiplelensesex2.png
+---
+name: multipleelementsex2-fig
+---
+Second lens analysis.
+```
 
 Adjusting $S_{o2}$ to be relative to the second lens, which is 5 mm in front
 of the first lens,
@@ -398,9 +419,11 @@ $$
 
 The magnification is unity (although the image is inverted) and the image is
 20 mm to the right of the second lens.
-```
 
-```{admonition} Example: ABCD matrices with multiple lenses
+</div>
+
+<div class="admonition note" name="html-admonition">
+<p class="admonition-title">Example: ABCD matrices with multiple lenses</p>
 
 Repeat the last example, but using ABCD matrices.
 
@@ -544,4 +567,5 @@ $$
 
 We get the same result; namely, the object location is 20mm to the right of the
 second lens and the magnification is -1.
-```
+
+</div>

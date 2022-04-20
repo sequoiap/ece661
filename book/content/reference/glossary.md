@@ -14,3 +14,36 @@ E Irradiance (Illuminance)
 
 L Radiance (Luminance)
 : Characterizes a source. 
+
+* Focal Length
+* Diopter
+* Magnification
+* Virtual and real images
+* Field of view (FOV)
+* Depth of focus
+* Depth of field
+* Throw
+* Aperture stop
+* Field stop
+* Pupils (entrance and exit)
+* Principal planes
+* Effective focal length (EFL)
+* Back focal length (BFL)
+* Front focal length (FFL)
+* Numerical aperture
+* F#						
+* Intensity
+* Irradiance
+* Power 
+* Accommodation
+* Abbe number
+* Vignetting
+* Ray fans (Ray intercept plots)
+* Field angles
+* Spot diagrams
+* Merit function
+* Airy disk
+* Optical path difference (OPD)
+* Point spread function (PSF)
+* Modulation transfer function (MTF)
+* Strehl ratio

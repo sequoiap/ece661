@@ -166,7 +166,7 @@ calculation for arbitrary shapes and optical systems.
 
 1. Rays are normal to the wavefront and vice versa.  
 2. Rays satisfy the laws of reflecton and refraction.  
-3. Th optical path length along any ray between two wavefronts are equal.  
+3. The optical path length along any ray between two wavefronts are equal.  
 4. Irradiance at any point is proportional to the ray density at that point.  
 
 Other resulting corollaries are:
