@@ -20,8 +20,6 @@ parts:
   numbered: true
   chapters:
   - file: content/part2/radiometry
-  - file: notebooks
-  - file: markdown-notebooks
 - caption: Part Three
   numbered: true
   chapters: 
@@ -52,3 +50,4 @@ parts:
   numbered: false
   chapters: 
   - file: content/reference/transforms
+  - file: content/reference/glossary
