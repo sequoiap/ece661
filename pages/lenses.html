@@ -1,0 +1,1231 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Lenses &#8212; Applied Electromagnetics and Optics</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Cameras" href="cameras.html" />
+    <link rel="prev" title="3. Prisms" href="prisms.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Applied Electromagnetics and Optics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part One
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maxwell.html">
+   1. Maxwell’s Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geometrical.html">
+   2. Geometrical Optics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prisms.html">
+   3. Prisms
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Lenses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cameras.html">
+   5. Cameras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="principalplanes.html">
+   6. Principal Planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="depthoffocus.html">
+   7. Depth of Focus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="zoomlens.html">
+   8. Zoom Lenses and Afocals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pupils.html">
+   9. Pupils
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part Two
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="radiometry.html">
+   10. Radiometry
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part Three
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="diffraction.html">
+   11. Diffraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fraunhofer.html">
+   12. Fraunhofer Approximation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gratings.html">
+   13. Gratings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spectrometers.html">
+   14. Spectrometers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="telescopes.html">
+   15. Telescopes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="opticalprocessing.html">
+   16. Optical Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lensperformance.html">
+   17. Lens Performance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/geometrical.html">
+   Problem Set 1: Geometrical Optics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/lenses.html">
+   Problem Set 2: Lenses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/camera.html">
+   Problem Set 3: Cameras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/principalplanes.html">
+   Problem Set 4: Principal Planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/humaneye.html">
+   Problem Set 5: The Human Eye
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/radiometry.html">
+   Problem Set 6: Radiometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/fields.html">
+   Problem Set 7: Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/diffraction.html">
+   Problem Set 8: Diffraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/gratings.html">
+   Problem Set 9: Gratings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/spectrometry.html">
+   Problem Set 10: Spectrometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/lensperformance.html">
+   Problem Set 11: Lens Performance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/zoomlens.html">
+   Project 1: Camera Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/laserdrilling.html">
+   Project 2: Laser Drilling Project
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/transforms.html">
+   Fourier Transforms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/sms276/ece661"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sms276/ece661/issues/new?title=Issue%20on%20page%20%2Fpages/lenses.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sms276/ece661/edit/master/book/pages/lenses.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/pages/lenses.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conjugate-equation">
+   4.1. Conjugate Equation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thin-lens">
+   4.2. Thin Lens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imaging">
+   4.3. Imaging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnification">
+   4.4. Magnification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abcd-matrices">
+   4.5. ABCD Matrices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#free-space-propogation">
+     4.5.1. Free-Space Propogation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refraction-at-a-planar-boundary">
+     4.5.2. Refraction at a Planar Boundary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     4.5.3. Thin Lens
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reflection-from-a-planar-mirror">
+     4.5.4. Reflection from a Planar Mirror
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reflection-from-a-spherical-mirror">
+     4.5.5. Reflection from a Spherical Mirror
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-elements">
+   4.6. Multiple Elements
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lenses</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conjugate-equation">
+   4.1. Conjugate Equation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thin-lens">
+   4.2. Thin Lens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#imaging">
+   4.3. Imaging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#magnification">
+   4.4. Magnification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abcd-matrices">
+   4.5. ABCD Matrices
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#free-space-propogation">
+     4.5.1. Free-Space Propogation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#refraction-at-a-planar-boundary">
+     4.5.2. Refraction at a Planar Boundary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     4.5.3. Thin Lens
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reflection-from-a-planar-mirror">
+     4.5.4. Reflection from a Planar Mirror
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reflection-from-a-spherical-mirror">
+     4.5.5. Reflection from a Spherical Mirror
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-elements">
+   4.6. Multiple Elements
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="lenses">
+<h1><span class="section-number">4. </span>Lenses<a class="headerlink" href="#lenses" title="Permalink to this headline">#</a></h1>
+<section id="conjugate-equation">
+<h2><span class="section-number">4.1. </span>Conjugate Equation<a class="headerlink" href="#conjugate-equation" title="Permalink to this headline">#</a></h2>
+<p>Let’s start by looking at a single spherical surface. We will use Snell’s Law.</p>
+<p>Here is our sign convention:</p>
+<ul class="simple">
+<li><p>Light travels from left to right</p></li>
+<li><p>Distances up are positive</p></li>
+<li><p>Distances to the right are positive</p></li>
+<li><p>Counterclockwise (CCW) angles are positive</p></li>
+<li><p>For light travelling right to left, use n as negative.</p></li>
+</ul>
+<figure class="align-default" id="lenses1-fig">
+<img alt="../_images/lenses1.png" src="../_images/lenses1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Single spherical surface interface.</span><a class="headerlink" href="#lenses1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Apply Snell’s Law at the interface:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1def5744-36c5-405b-95b4-bbbeafceb770">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-1def5744-36c5-405b-95b4-bbbeafceb770" title="Permalink to this equation">#</a></span>\[\begin{equation}
+    n \sin (i) = n' \sin (i')
+\end{equation}\]</div>
+<p>Using the paraxial approximation,</p>
+<div class="math notranslate nohighlight" id="equation-paraxial-snell">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-paraxial-snell" title="Permalink to this equation">#</a></span>\[
+    n i = n' i'
+\]</div>
+<p>We need to relate u to i and u’ to i’.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    u + \phi + q = 180 \\
+    q = 180 - u - \phi \\
+    q + i = 180 \\
+    i = 180 - 180 + u + \phi \\
+    |i| = |u| + | \phi | \\
+\end{split}\]</div>
+<p>From our sign convention, <span class="math notranslate nohighlight">\(u \gt 0\)</span>, <span class="math notranslate nohighlight">\(\phi \lt 0\)</span>, and <span class="math notranslate nohighlight">\(i \gt 0\)</span>. Hence,</p>
+<div class="math notranslate nohighlight">
+\[
+    i = u - \phi
+\]</div>
+<p>Next, we’ll relate u’ to i’:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    |i'| + |u'| + 180  - |\phi| = 180 \\
+    |i'| = - |u'| + |\phi|
+\end{split}\]</div>
+<p>Again, noting that <span class="math notranslate nohighlight">\(i' \gt 0\)</span>, <span class="math notranslate nohighlight">\(\phi \lt 0\)</span>, and <span class="math notranslate nohighlight">\(u' \lt 0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+    i' = u' - \phi
+\]</div>
+<p>Substituting into <a class="reference internal" href="#equation-paraxial-snell">(4.2)</a>, we get:</p>
+<div class="math notranslate nohighlight">
+\[
+    n (u - \phi) = n' (u' - \phi)
+\]</div>
+<p>Now, we need to relate the angle equation to position.</p>
+<figure class="align-default" id="lenses2-fig">
+<img alt="../_images/lenses2.png" src="../_images/lenses2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Relating angle to position.</span><a class="headerlink" href="#lenses2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Again, using the paraxial approximation,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \tan u \approx u = \frac{h}{S_o} \\
+    \sin \phi \approx \phi = \frac{h}{R} \\
+    \tan u' \approx u' = \frac{h}{S_i} 
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    n (u - \phi) = n' (u' - \phi) \\
+    n \left( \frac{h}{S_o} - \frac{h}{R} \right) = n' \left( \frac{h}{S_i} - \frac{h}{R} \right) \\
+    \frac{n}{S_o} - \frac{n}{R} = \frac{n'}{S_i} - \frac{n'}{R} \\
+    \frac{n}{S_o} - \frac{n'}{S_i} = (n - n') \frac{1}{R} \\
+\end{split}\]</div>
+<p>Or,</p>
+<div class="math notranslate nohighlight" id="equation-conjugate-equation">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-conjugate-equation" title="Permalink to this equation">#</a></span>\[\begin{split}
+    \frac{n'}{S_i} - \frac{n}{S_o} = (n' - n) \frac{1}{R} \\
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(1 / R \equiv C\)</span> is the curvature. <a class="reference internal" href="#equation-conjugate-equation">(4.3)</a> is the
+conjugate equation.</p>
+</section>
+<section id="thin-lens">
+<h2><span class="section-number">4.2. </span>Thin Lens<a class="headerlink" href="#thin-lens" title="Permalink to this headline">#</a></h2>
+<p>We’ll use the conjugate equation for a single surface to get the conjugate
+equation for a thin lens.</p>
+<figure class="align-default" id="conjugatesurface-fig">
+<img alt="../_images/conjugatesurface.png" src="../_images/conjugatesurface.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">A single surface.</span><a class="headerlink" href="#conjugatesurface-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The conjugate equation for the picture in <a class="reference internal" href="#conjugatesurface-fig"><span class="std std-numref">Fig. 4.3</span></a> is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \frac{n'}{S_i} - \frac{n}{S_o} = \frac{(n' - n)}{R} \\
+\end{split}\]</div>
+<figure class="align-default" id="conjugatethinlens-fig">
+<img alt="../_images/conjugatethinlens.png" src="../_images/conjugatethinlens.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">A thin lens.</span><a class="headerlink" href="#conjugatethinlens-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The thin lens is simply the single surface, replicated; once for entry, and
+once for exit. The entry and exit of the material have the same index, with
+a different index in the middle. We assume zero separation between lens
+surfaces.</p>
+<figure class="align-default" id="conjugatethinlensmodel-fig">
+<img alt="../_images/conjugatethinlensmodel.png" src="../_images/conjugatethinlensmodel.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">A thin lens. a) The first encountered surface. b) The second encountered
+surface.</span><a class="headerlink" href="#conjugatethinlensmodel-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The following are true for the first surface:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    S = S_o \\
+    S' = S_1 \\
+    n = n_1 \\
+    n' = n_2 \\
+    R = R_1 
+\end{split}\]</div>
+<p>The conjugate equation for the first surface is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \frac{n_2}{S_1} - \frac{n_1}{S_o} = \frac{(n_2 - n_1)}{R_1} \\
+    \frac{n_2}{S_1} = \frac{n_1}{S_o} + \frac{(n_2 - n_1)}{R_1}
+\end{split}\]</div>
+<p>The following are true for the second surface:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    S = -S_1 \\
+    S' = S_i \\
+    n = n_2 \\
+    n' = n_1 \\
+    R = R_2 
+\end{split}\]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \frac{n_1}{S_i} - \frac{n_2}{S_1} = \frac{(n_1 - n_2)}{R_2} \\
+\end{split}\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(n_2 / S_i\)</span> from before,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \frac{n_1}{S_i} - \frac{n_1}{S_o} - \frac{n_2 - n_1}{R_1} = \frac{(n_1 - n_2)}{R_2} \\
+    \frac{1}{S_i} - \frac{1}{S_o} = \left(\frac{1}{n_1}\right) \left( \frac{n_1 - n_2}{R_2} + \frac{n_2 - n_1}{R_1} \right)
+\end{split}\]</div>
+<div class="math notranslate nohighlight" id="equation-thin-lens-conjugate-equation">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-thin-lens-conjugate-equation" title="Permalink to this equation">#</a></span>\[
+    \frac{1}{S_i} - \frac{1}{S_o} = \left(\frac{n_2 - n_1}{n_1}\right) \left(\frac{1}{R_1} - \frac{1}{R_2}\right) = \frac{1}{f}
+\]</div>
+<p>Remember that distances to the left are negative and distances to the right are positive.</p>
+<p>If we define <span class="math notranslate nohighlight">\(S_o\)</span> being left of the lens as “positive”, we get</p>
+<div class="math notranslate nohighlight" id="equation-object-image-equation">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-object-image-equation" title="Permalink to this equation">#</a></span>\[
+    \frac{1}{S_i} + \frac{1}{S_o} = \frac{1}{f}
+\]</div>
+</section>
+<section id="imaging">
+<h2><span class="section-number">4.3. </span>Imaging<a class="headerlink" href="#imaging" title="Permalink to this headline">#</a></h2>
+<p>Now, let’s look at producing an image from an object using a single thin lens.</p>
+<p>We will analyze the lens and image using the following properties:</p>
+<ol class="simple">
+<li><p>A ray passing through the focal point is bent parallel to the axis of symmetry.</p></li>
+<li><p>An incident ray parallel to the lens axis is bent to pass through the back focal point.</p></li>
+<li><p>A ray passing through the center of the lens is unchanged in direction.</p></li>
+<li><p>A point in the object space is imaged to a point in the image space.</p></li>
+<li><p>Parallel rays image to a point (a lens converts from incident angle to a point).</p></li>
+</ol>
+</section>
+<section id="magnification">
+<h2><span class="section-number">4.4. </span>Magnification<a class="headerlink" href="#magnification" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="abcd-matrices">
+<h2><span class="section-number">4.5. </span>ABCD Matrices<a class="headerlink" href="#abcd-matrices" title="Permalink to this headline">#</a></h2>
+<p>In a homogeneous material, rays travel in straight lines. A ray is
+characterized by its position and direction.</p>
+<figure class="align-default" id="opticalsystem-fig">
+<img alt="../_images/opticalsystem.png" src="../_images/opticalsystem.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">An optical system.</span><a class="headerlink" href="#opticalsystem-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>An optical system is a set of optical components that change the position and
+direction of rays.</p>
+<p>In the paraxial approximation, when all angles are sufficiently small so that
+<span class="math notranslate nohighlight">\(\sin \theta \approx \theta\)</span>, the relationship between <span class="math notranslate nohighlight">\((y_2, \theta_2)\)</span> and
+<span class="math notranslate nohighlight">\((y_1, \theta_1)\)</span> is linear.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y_2 = A y_1 + B \theta _1 \\
+    \theta _2 = C y_1 + D \theta _1 \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \begin{bmatrix}
+        y_2 \\
+        \theta _2 
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        A &amp; B \\
+        C &amp; D
+    \end{bmatrix}
+    \begin{bmatrix}
+        y_1 \\
+        \theta _1
+    \end{bmatrix}
+\end{split}\]</div>
+<p>The matrix
+<span class="math notranslate nohighlight">\(M = \begin{bmatrix}
+    A &amp; B \\
+    C &amp; D
+\end{bmatrix}\)</span>
+characterizes the optical system.</p>
+<p>Let’s calculate the ABCD matrices of some common components.</p>
+<section id="free-space-propogation">
+<h3><span class="section-number">4.5.1. </span>Free-Space Propogation<a class="headerlink" href="#free-space-propogation" title="Permalink to this headline">#</a></h3>
+<p>Rays travel in straight lines.</p>
+<figure class="align-default" id="freespacepropogation-fig">
+<img alt="../_images/freespacepropogation.png" src="../_images/freespacepropogation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">Free space propogation.</span><a class="headerlink" href="#freespacepropogation-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y_2 &amp;= y_1 + \theta _1 d \\
+    \theta _2 &amp;= \theta _1
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M =
+    \begin{bmatrix}
+        1 &amp; d \\
+        0 &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="refraction-at-a-planar-boundary">
+<h3><span class="section-number">4.5.2. </span>Refraction at a Planar Boundary<a class="headerlink" href="#refraction-at-a-planar-boundary" title="Permalink to this headline">#</a></h3>
+<figure class="align-default" id="refractionplanar-fig">
+<img alt="../_images/refractionplanar.png" src="../_images/refractionplanar.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Refraction at a planar boundary.</span><a class="headerlink" href="#refractionplanar-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[
+    y_2 = y_1
+\]</div>
+<p>From the conjugate equation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    n (\theta _1 - \alpha) &amp;= n' (\theta _2 - \alpha) \\
+    \alpha &amp;= \frac{y_1}{R} \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    n \theta _1 - \frac{n}{R} y_1 &amp;= n' \theta _2 - \frac{n'}{R} y_1 \\
+    \theta _2 &amp;= \frac{n' - n}{n' R} y_1 = \frac{n}{n'} \theta _1 \\
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M =
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        \frac{n-n'}{n' R} &amp; \frac{n}{n'}
+    \end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="id1">
+<h3><span class="section-number">4.5.3. </span>Thin Lens<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    y_2 &amp;= y_1 \\
+    \theta _2 &amp;= \theta _1 - \frac{y_1}{f} 
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M =
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        - \frac{1}{f} &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="reflection-from-a-planar-mirror">
+<h3><span class="section-number">4.5.4. </span>Reflection from a Planar Mirror<a class="headerlink" href="#reflection-from-a-planar-mirror" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M =
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        0 &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="reflection-from-a-spherical-mirror">
+<h3><span class="section-number">4.5.5. </span>Reflection from a Spherical Mirror<a class="headerlink" href="#reflection-from-a-spherical-mirror" title="Permalink to this headline">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M =
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        \frac{2}{R} &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+</section>
+</section>
+<section id="multiple-elements">
+<h2><span class="section-number">4.6. </span>Multiple Elements<a class="headerlink" href="#multiple-elements" title="Permalink to this headline">#</a></h2>
+<figure class="align-default" id="multipleelements-fig">
+<img alt="../_images/multipleelements.png" src="../_images/multipleelements.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Multiple elements demonstrating ABCD matrix multiplication.</span><a class="headerlink" href="#multipleelements-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    r_2 &amp;= M_1 r_1 \\
+    r_3 &amp;= M_2 r_2 = M_2 M_1 r_1 \\
+    r_4 &amp;= M_3 r_3 = M_3 M_2 M_1 r_1 \\
+    r_5 &amp;= M_4 r_4 = M_4 M_3 M_2 M_1 r_1 \\
+    M_{tot} &amp;= M_4 M_3 M_2 M_1
+\end{split}\]</div>
+<p>The first element encountered by the ray is the last matrix in the
+multiplication (since matrix multiplication is performed right to left).</p>
+<div class="admonition note" name="html-admonition">
+<p class="admonition-title">Example: Multiple lenses</p>
+<p>Find the image location and magnification.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(S_0 = 30mm\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(d = 5mm\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f_1 = 10mm\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(f_2 = -20mm\)</span></p></li>
+</ul>
+<p><strong>Solution</strong></p>
+<figure class="align-default" id="multipleelementsex1-fig">
+<img alt="../_images/multiplelensesex1.png" src="../_images/multiplelensesex1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">First lens analysis.</span><a class="headerlink" href="#multipleelementsex1-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Using the thin lens equations,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \frac{1}{30} + \frac{1}{S_{i1}} &amp;= \frac{1}{10} \\
+    S_{i1} &amp;= \left( \frac{1}{10} - \frac{1}{30} \right) ^{-1} = 15 \\
+    M_1 &amp;= - \frac{S_{i1}}{S_{o1}} = - \frac{15}{30} = - \frac{1}{2}
+\end{split}\]</div>
+<figure class="align-default" id="multipleelementsex2-fig">
+<img alt="../_images/multiplelensesex2.png" src="../_images/multiplelensesex2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">Second lens analysis.</span><a class="headerlink" href="#multipleelementsex2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Adjusting <span class="math notranslate nohighlight">\(S_{o2}\)</span> to be relative to the second lens, which is 5 mm in front
+of the first lens,</p>
+<div class="math notranslate nohighlight">
+\[
+    S_{o2} = 15 - 5 = -10
+\]</div>
+<p>we get,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \frac{1}{-10} + \frac{1}{S_{i2}} &amp;= - \frac{1}{10} \\
+    S_{i2} &amp;= \left( - \frac{1}{20} + \frac{1}{10} \right) ^{-1} = 20 \\
+    M_2 &amp;= \frac{-20}{-10} = 2
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+    M = -\frac{1}{2} \cdot 2 = -1
+\]</div>
+<p>The magnification is unity (although the image is inverted) and the image is
+20 mm to the right of the second lens.</p>
+</div>
+<div class="admonition note" name="html-admonition">
+<p class="admonition-title">Example: ABCD matrices with multiple lenses</p>
+<p>Repeat the last example, but using ABCD matrices.</p>
+<p><strong>Solution</strong></p>
+<p>The distance to the first lens is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M_1 =
+    \begin{bmatrix}
+        1 &amp; 30 \\
+        0 &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+<p>The first lens is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M_2 =
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        - \frac{1}{10} &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+<p>The distance from the first to the second lens is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M_3 =
+    \begin{bmatrix}
+        1 &amp; 5 \\
+        0 &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+<p>The second lens is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M_4 =
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        \frac{1}{20} &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+<p>The distance to the focus is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    M_5 =
+    \begin{bmatrix}
+        1 &amp; d \\
+        0 &amp; 1
+    \end{bmatrix}
+\end{split}\]</div>
+<p>If we launch a ray with a height of 1 and a variable ray angle into the system,
+we get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    \begin{bmatrix}
+        y_2 \\
+        \theta _2 
+    \end{bmatrix}
+    &amp;=
+    \begin{bmatrix}
+        1 &amp; d \\
+        0 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        0.05 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 &amp; 5 \\
+        0 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 &amp; 0 \\
+        -0.1 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 &amp; 30 \\
+        0 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\
+        \theta
+    \end{bmatrix} \\
+    &amp;=
+    \begin{bmatrix}
+        1 &amp; d \\
+        0 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0.5 &amp; 20 \\
+        -0.075 &amp; -1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 \\
+        \theta
+    \end{bmatrix} \\
+    &amp;=
+    \begin{bmatrix}
+        1 &amp; d \\
+        0 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        0.5 &amp; 20 \theta \\
+        -0.075 &amp; -\theta
+    \end{bmatrix} \\
+    \begin{bmatrix}
+        y_2 \\
+        \theta _2 
+    \end{bmatrix}
+    &amp;=
+    \begin{bmatrix}
+        0.5 + 20 \theta + d(-0.075 - \theta) \\
+        -0.075 - \theta
+    \end{bmatrix}
+\end{split}\]</div>
+<p>For an image point, the ray height needs to be independent of the incident ray
+angle.</p>
+<div class="math notranslate nohighlight">
+\[
+    y_2 = 0.5 - 0.075 d + (20 - e) \theta
+\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+    20 - d &amp;= 0 \\
+    d &amp;= 20
+\end{split}\]</div>
+<p>Back substitute <span class="math notranslate nohighlight">\(d = 20\)</span> to get the image height:</p>
+<div class="math notranslate nohighlight">
+\[
+    y_2 = 0.5 - (0.075)(2) = -1
+\]</div>
+<p>We get the same result; namely, the object location is 20mm to the right of the
+second lens and the magnification is -1.</p>
+</div></section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="prisms.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Prisms</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="cameras.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Cameras</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dr. Stephen Schultz<br/>
+  
+      &copy; Copyright 2023.<br/>
+    <div class="extra_footer">
+      Brigham Young University
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

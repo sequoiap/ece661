@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Problem Set 1: Geometrical Optics &#8212; Applied Electromagnetics and Optics</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Problem Set 2: Lenses" href="lenses.html" />
+    <link rel="prev" title="17. Lens Performance" href="../pages/lensperformance.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Applied Electromagnetics and Optics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part One
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/maxwell.html">
+   1. Maxwell’s Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/geometrical.html">
+   2. Geometrical Optics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/prisms.html">
+   3. Prisms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/lenses.html">
+   4. Lenses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/cameras.html">
+   5. Cameras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/principalplanes.html">
+   6. Principal Planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/depthoffocus.html">
+   7. Depth of Focus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/zoomlens.html">
+   8. Zoom Lenses and Afocals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/pupils.html">
+   9. Pupils
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part Two
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/radiometry.html">
+   10. Radiometry
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part Three
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/diffraction.html">
+   11. Diffraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/fraunhofer.html">
+   12. Fraunhofer Approximation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/gratings.html">
+   13. Gratings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/spectrometers.html">
+   14. Spectrometers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/telescopes.html">
+   15. Telescopes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/opticalprocessing.html">
+   16. Optical Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pages/lensperformance.html">
+   17. Lens Performance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Problems
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Problem Set 1: Geometrical Optics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lenses.html">
+   Problem Set 2: Lenses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="camera.html">
+   Problem Set 3: Cameras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="principalplanes.html">
+   Problem Set 4: Principal Planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="humaneye.html">
+   Problem Set 5: The Human Eye
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="radiometry.html">
+   Problem Set 6: Radiometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fields.html">
+   Problem Set 7: Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diffraction.html">
+   Problem Set 8: Diffraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gratings.html">
+   Problem Set 9: Gratings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spectrometry.html">
+   Problem Set 10: Spectrometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lensperformance.html">
+   Problem Set 11: Lens Performance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="zoomlens.html">
+   Project 1: Camera Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="laserdrilling.html">
+   Project 2: Laser Drilling Project
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/transforms.html">
+   Fourier Transforms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/sms276/ece661"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sms276/ece661/issues/new?title=Issue%20on%20page%20%2Fproblems/geometrical.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sms276/ece661/edit/master/book/problems/geometrical.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/problems/geometrical.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Problem Set 1: Geometrical Optics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="problem-set-1-geometrical-optics">
+<h1>Problem Set 1: Geometrical Optics<a class="headerlink" href="#problem-set-1-geometrical-optics" title="Permalink to this headline">#</a></h1>
+<ol>
+<li><p>Start with the general form of the electric field <span class="math notranslate nohighlight">\(\vec{E} = \vec{E}_0 \exp
+(-j k \phi)\)</span>, where <span class="math notranslate nohighlight">\(\vec{E}\)</span>, <span class="math notranslate nohighlight">\(E_0\)</span>, and <span class="math notranslate nohighlight">\(\phi\)</span> all vary with position.
+Show that with the geometrical optics approximation <span class="math notranslate nohighlight">\((\lambda \to 0, k \to
+\infty)\)</span> Gauss’s law becomes <span class="math notranslate nohighlight">\((\nabla \cdot \vec{E} = 0)\)</span>.</p></li>
+<li><p>A lifeguard is standing at the point A <span class="math notranslate nohighlight">\((0, 0)\)</span> and a person is drowning at
+the point B <span class="math notranslate nohighlight">\((x_0, y_0)\)</span>, as shown in <a class="reference internal" href="#pool-fig"><span class="std std-numref">Fig. 1</span></a>.  The lifeguard has
+a running speed of <span class="math notranslate nohighlight">\(v_1\)</span> and swimming speed of <span class="math notranslate nohighlight">\(v_2\)</span> <span class="math notranslate nohighlight">\((v_1 \gt v_2)\)</span>. What
+is the quickest path for the lifeguard to take?</p>
+<figure class="align-default" id="pool-fig">
+<img alt="../_images/pool.png" src="../_images/pool.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">A pool.</span><a class="headerlink" href="#pool-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Book Problem 1.7</p></li>
+<li><p>Book Problem 2.1</p></li>
+<li><p>Book Problem 2.2 (use <span class="math notranslate nohighlight">\(c_1 = 1.4\)</span>)</p></li>
+<li><p>Book Problem 2.4</p></li>
+<li><p>A ray is incident onto a 45-45-90 prism at an angle of <span class="math notranslate nohighlight">\(20^\circ\)</span> (see
+<a class="reference internal" href="#prism-fig"><span class="std std-numref">Fig. 2</span></a>). If the two legs are mirror coated, what is the
+direction of the beam after passing through the prism?</p>
+<figure class="align-default" id="prism-fig">
+<img alt="../_images/prism.png" src="../_images/prism.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">A 45-45-90 prism.</span><a class="headerlink" href="#prism-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>A beam is refracted through a prism shown in <a class="reference internal" href="#prism2-fig"><span class="std std-numref">Fig. 3</span></a>.</p>
+<figure class="align-default" id="prism2-fig">
+<img alt="../_images/prism2.png" src="../_images/prism2.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">A 30-60-90 prism.</span><a class="headerlink" href="#prism2-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>a. What is the ratio of the beam sizes (<span class="math notranslate nohighlight">\(W_2 / W_1\)</span>)?</p>
+<p>b. A collimated beam has an elliptical cross section, with a semiaxis ratio
+of 2:1.  Design a prism system that can transform the beam to be circular.</p>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong>Solutions</strong></p>
+<p><em>Problem 1</em></p>
+<div class="toggle docutils container">
+<p>Some hidden toggle content!</p>
+<p>Great!</p>
+</div>
+<p><em>Problem 2</em></p>
+<div class="toggle docutils container">
+<p>Some hidden toggle content!</p>
+<p>Great!</p>
+</div>
+<p><em>Problem 3</em></p>
+<div class="toggle docutils container">
+<p>Some hidden toggle content!</p>
+<p>Great!</p>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./problems"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../pages/lensperformance.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">17. </span>Lens Performance</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="lenses.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Problem Set 2: Lenses</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dr. Stephen Schultz<br/>
+  
+      &copy; Copyright 2023.<br/>
+    <div class="extra_footer">
+      Brigham Young University
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

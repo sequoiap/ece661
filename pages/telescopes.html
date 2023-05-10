@@ -1,0 +1,861 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>15. Telescopes &#8212; Applied Electromagnetics and Optics</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="16. Optical Processing" href="opticalprocessing.html" />
+    <link rel="prev" title="14. Spectrometers" href="spectrometers.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Applied Electromagnetics and Optics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part One
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="maxwell.html">
+   1. Maxwell’s Equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="geometrical.html">
+   2. Geometrical Optics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prisms.html">
+   3. Prisms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lenses.html">
+   4. Lenses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cameras.html">
+   5. Cameras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="principalplanes.html">
+   6. Principal Planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="depthoffocus.html">
+   7. Depth of Focus
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="zoomlens.html">
+   8. Zoom Lenses and Afocals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pupils.html">
+   9. Pupils
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part Two
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="radiometry.html">
+   10. Radiometry
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Part Three
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="diffraction.html">
+   11. Diffraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="fraunhofer.html">
+   12. Fraunhofer Approximation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gratings.html">
+   13. Gratings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="spectrometers.html">
+   14. Spectrometers
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   15. Telescopes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="opticalprocessing.html">
+   16. Optical Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lensperformance.html">
+   17. Lens Performance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Problems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/geometrical.html">
+   Problem Set 1: Geometrical Optics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/lenses.html">
+   Problem Set 2: Lenses
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/camera.html">
+   Problem Set 3: Cameras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/principalplanes.html">
+   Problem Set 4: Principal Planes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/humaneye.html">
+   Problem Set 5: The Human Eye
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/radiometry.html">
+   Problem Set 6: Radiometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/fields.html">
+   Problem Set 7: Fields
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/diffraction.html">
+   Problem Set 8: Diffraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/gratings.html">
+   Problem Set 9: Gratings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/spectrometry.html">
+   Problem Set 10: Spectrometry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/lensperformance.html">
+   Problem Set 11: Lens Performance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/zoomlens.html">
+   Project 1: Camera Project
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../problems/laserdrilling.html">
+   Project 2: Laser Drilling Project
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/transforms.html">
+   Fourier Transforms
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/sms276/ece661/master?urlpath=tree/book/pages/telescopes.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/sms276/ece661"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sms276/ece661/issues/new?title=Issue%20on%20page%20%2Fpages/telescopes.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sms276/ece661/edit/master/book/pages/telescopes.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/pages/telescopes.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-telescopes">
+   15.1. Types of telescopes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#irradiance-pattern">
+   15.2. Irradiance pattern
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rayleigh-criteria">
+   15.3. Rayleigh Criteria
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Telescopes</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-telescopes">
+   15.1. Types of telescopes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#irradiance-pattern">
+   15.2. Irradiance pattern
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rayleigh-criteria">
+   15.3. Rayleigh Criteria
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="telescopes">
+<h1><span class="section-number">15. </span>Telescopes<a class="headerlink" href="#telescopes" title="Permalink to this headline">#</a></h1>
+<section id="types-of-telescopes">
+<h2><span class="section-number">15.1. </span>Types of telescopes<a class="headerlink" href="#types-of-telescopes" title="Permalink to this headline">#</a></h2>
+<p>Object and image are both at infinity (collimated light in, collimated light out).</p>
+<p>There are 2 main configurations: Kepler, and Galilean (see <a class="reference internal" href="#refractivetelescopes-fig"><span class="std std-numref">Fig. 15.1</span></a>).</p>
+<figure class="align-default" id="refractivetelescopes-fig">
+<img alt="../_images/refractive_telescopes.png" src="../_images/refractive_telescopes.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 15.1 </span><span class="caption-text">Kepler vs Galilean telescopes.</span><a class="headerlink" href="#refractivetelescopes-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In Kepler telescopes, both <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span> are positive lenses with the distance between them <span class="math notranslate nohighlight">\(D = f_1 + f_2\)</span>. Galilean telescopes, on the other hand, have <span class="math notranslate nohighlight">\(f_1\)</span> as a positive lens and <span class="math notranslate nohighlight">\(f_2\)</span> as a negative lens. The distance <span class="math notranslate nohighlight">\(D\)</span> between is still <span class="math notranslate nohighlight">\(D = f_1 + f_2\)</span>; in this case, however, the distance is shorter (since one of the lenses is negative).</p>
+<p>Since there is no focus, we will use angular magnification:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-71a21922-e00e-4bab-86a3-c59f1188d524">
+<span class="eqno">(15.1)<a class="headerlink" href="#equation-71a21922-e00e-4bab-86a3-c59f1188d524" title="Permalink to this equation">#</a></span>\[\begin{equation}
+    M_{ang} = \frac{\tan \theta '}{\tan \theta} = - \frac{F_1}{F_2}
+\end{equation}\]</div>
+<p>Modern astronomical telescopes are actually really large cameras. The goal of a
+telescope is to separate two closely spaced, distant objects (such as two
+stars).</p>
+<p>Let’s look at a circular aperture of an astronomical telescope. We’ll model it
+as a single perfect lens.</p>
+<figure class="align-default" id="perfectlens-fig">
+<a class="reference internal image-reference" href="../_images/perfectlens.svg"><img alt="../_images/perfectlens.svg" height="200em" src="../_images/perfectlens.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15.2 </span><span class="caption-text">Single perfect lens.</span><a class="headerlink" href="#perfectlens-fig" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>At the focal plane:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-db8a4489-8960-4443-bf26-49eec09256df">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-db8a4489-8960-4443-bf26-49eec09256df" title="Permalink to this equation">#</a></span>\[\begin{align}
+    E(x,y) &amp;= \mathfrak{F} \left. \left\{ \mathrm{circ} \left( \frac{r}{D/2} \right) \right\} \right| _{f_r = r / \lambda f} \\
+    &amp;= E_0 \left[ 2 \frac{J_1 ( 2 \pi \frac{D}{2} f_x )}{ 2 \pi \frac{D}{2} f_x } \right] \\
+    &amp;= E_0 \left[ 2 \frac{J_1 ( 2 \pi \frac{D}{2} \frac{r}{\lambda f} )}{ 2 \pi \frac{D}{2} \frac{r}{\lambda f} } \right]
+\end{align}\]</div>
+<figure class="align-default" id="telescopes1-fig">
+<a class="reference internal image-reference" href="../_images/telescopes1.png"><img alt="../_images/telescopes1.png" src="../_images/telescopes1.png" style="height: 20em;" /></a>
+</figure>
+<figure class="align-default" id="telescopes2-fig">
+<img alt="../_images/telescopes2.png" src="../_images/telescopes2.png" />
+</figure>
+<figure class="align-default" id="telescopes3-fig">
+<img alt="../_images/telescopes3.png" src="../_images/telescopes3.png" />
+</figure>
+</section>
+<section id="irradiance-pattern">
+<h2><span class="section-number">15.2. </span>Irradiance pattern<a class="headerlink" href="#irradiance-pattern" title="Permalink to this headline">#</a></h2>
+<p>The irradiance pattern is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5613c2bc-a0c1-4ed1-a564-326f47bbad03">
+<span class="eqno">(15.3)<a class="headerlink" href="#equation-5613c2bc-a0c1-4ed1-a564-326f47bbad03" title="Permalink to this equation">#</a></span>\[\begin{equation}
+    I = I_0 \left[ 2 \frac{ J_1 ( \pi D \frac{r}{\lambda f} ) }{ \pi D \frac{r}{\lambda f}  } \right] ^2
+\end{equation}\]</div>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">jv</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">D</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">I0</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">I0</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">jv</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">D</span> <span class="o">*</span> <span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">D</span> <span class="o">*</span> <span class="n">a</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">I</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Irradiance Pattern&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Position (au)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Intensity (normalized)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/telescopes_1_0.png" src="../_images/telescopes_1_0.png" />
+</div>
+</div>
+<p>What is the diameter of the central lobe?</p>
+<div class="math notranslate nohighlight">
+\[
+    J_1(3.832) = 0
+\]</div>
+<div class="math notranslate nohighlight">
+\[ 
+    \frac{\pi}{\lambda} \frac{D}{f} r = 3.832
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-e3162577-c9d4-4452-b398-4b8c8d046499">
+<span class="eqno">(15.4)<a class="headerlink" href="#equation-e3162577-c9d4-4452-b398-4b8c8d046499" title="Permalink to this equation">#</a></span>\[\begin{align}
+    r &amp;= 3.832 \frac{\lambda}{\pi} \frac{f}{D} \\
+    &amp;= \frac{3.832}{\pi} \lambda \frac{f}{D} \\
+    d = 2 r &amp;= 2 \left( \frac{3.832}{\pi} \right) \lambda f_\# \\
+    d &amp;= 2.44 \lambda f_\#
+\end{align}\]</div>
+<p>This is called the Airy Disk.</p>
+<p>What if the incident beam has a different angle?</p>
+<p>Plane wave equation:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-362297af-5545-405b-8f52-1cb10f485545">
+<span class="eqno">(15.5)<a class="headerlink" href="#equation-362297af-5545-405b-8f52-1cb10f485545" title="Permalink to this equation">#</a></span>\[\begin{equation}
+    E_i = \exp [ j k (\sin \theta y + \cos \theta z)]
+\end{equation}\]</div>
+<p>If we use <span class="math notranslate nohighlight">\(E_i = \exp [j k \sin \theta y] = \exp [j 2 \pi \frac{\sin \theta}{\lambda} y]\)</span>:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bcdb6477-a453-4eee-8478-22b37b4e0121">
+<span class="eqno">(15.6)<a class="headerlink" href="#equation-bcdb6477-a453-4eee-8478-22b37b4e0121" title="Permalink to this equation">#</a></span>\[\begin{equation}
+    E(x, y) = \mathfrak{F} \left. \left\{ \exp[j k \sin \theta y] \mathrm{circ} \left( \frac{r}{D / 2} \right) \right\} \right| _{f_r = r / \lambda f} \\
+\end{equation}\]</div>
+<p>The pattern is the same; it is just shifted by</p>
+<div class="amsmath math notranslate nohighlight" id="equation-69bb696d-1cd0-4ade-896b-af4a93217279">
+<span class="eqno">(15.7)<a class="headerlink" href="#equation-69bb696d-1cd0-4ade-896b-af4a93217279" title="Permalink to this equation">#</a></span>\[\begin{align}
+    f_{x0} &amp;= \frac{\sin \theta}{y} \\
+    \frac{y_0}{\lambda f} &amp;= \frac{\sin \theta}{\lambda} \\
+    y_0 &amp;= \sin \theta f \approx \theta f
+\end{align}\]</div>
+<p>This is the same as that predicted by the conjugate equation.</p>
+</section>
+<section id="rayleigh-criteria">
+<h2><span class="section-number">15.3. </span>Rayleigh Criteria<a class="headerlink" href="#rayleigh-criteria" title="Permalink to this headline">#</a></h2>
+<dl class="simple myst">
+<dt>Rayleigh Criteria</dt><dd><p>Two incoherent point sources are “barely resolved” by a diffraction-limited system with a circular aperture when the center of the Airy disk of one point falls exactly on the first zero of the diffraction pattern.</p>
+</dd>
+</dl>
+<div class="amsmath math notranslate nohighlight" id="equation-8664fede-b9c5-48ed-839f-d658de220476">
+<span class="eqno">(15.8)<a class="headerlink" href="#equation-8664fede-b9c5-48ed-839f-d658de220476" title="Permalink to this equation">#</a></span>\[\begin{align}
+    \pi D \frac{r}{\lambda f} &amp;= 3.83 \\  
+    r &amp;= 1.22 \lambda \frac{f}{D} \\
+\end{align}\]</div>
+<p>So, the resolvable separation is</p>
+<div class="amsmath math notranslate nohighlight" id="equation-0aca891b-17f2-4347-a0d7-da3b50b05e33">
+<span class="eqno">(15.9)<a class="headerlink" href="#equation-0aca891b-17f2-4347-a0d7-da3b50b05e33" title="Permalink to this equation">#</a></span>\[\begin{align}
+    1.22 \lambda \frac{f}{D} &amp;= f \theta \\
+    \theta &amp;= 1.22 \frac{\lambda}{D}
+\end{align}\]</div>
+<p>Hence, the angular resolution is better with a larger diameter.</p>
+<p>However, a standard ground telescope has a limit to the maximum resolution it can attain. This limitation is caused by turbulence in the air.</p>
+<p>See the following websites:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.astronomynotes.com/telescop/s11.htm">https://www.astronomynotes.com/telescop/s11.htm</a></p></li>
+</ul>
+<p>Low turbulence: <span class="math notranslate nohighlight">\(\theta \geq 0.5 \mathrm{arcseconds}\)</span><br />
+Higher turbulence: <span class="math notranslate nohighlight">\(\theta \geq 2 \mathrm{arcseconds}\)</span></p>
+<p>Using visible light (550 nm), at low turbulence:</p>
+<div class="math notranslate nohighlight">
+\[
+    0.5 \mathrm{arcseconds} = (0.5) \frac{2 \pi \mathrm{rad}}{360 * 60 * 60} = 2.424 \mu mathrm{rad}
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-6f0811a5-9ec7-4195-a15f-b3a7eb723078">
+<span class="eqno">(15.10)<a class="headerlink" href="#equation-6f0811a5-9ec7-4195-a15f-b3a7eb723078" title="Permalink to this equation">#</a></span>\[\begin{align}
+    2.424 \times 10^-6 &amp;= \frac{550 \times 10^{-9}}{D} \\
+    D &amp;= 0.22 m
+\end{align}\]</div>
+<p>At high turbulence:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-901a529b-dcf7-4d38-a8f4-dbad6d2e4a4d">
+<span class="eqno">(15.11)<a class="headerlink" href="#equation-901a529b-dcf7-4d38-a8f4-dbad6d2e4a4d" title="Permalink to this equation">#</a></span>\[\begin{align}
+    D = \frac{550 \times 10^{-9}}{\frac{(2)(2 \pi)}{360 \cdot 60 \cdot 60}} = 0.0567 m
+\end{align}\]</div>
+<p>Some existing telescopes:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Telescope</p></th>
+<th class="text-align:center head"><p>Diameter</p></th>
+<th class="text-align:center head"><p>Min Separation</p></th>
+<th class="text-align:center head"><p>Year Constructed</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>Keck (Hawaii)</p></td>
+<td class="text-align:center"><p>10 m</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(0.07 \mu \mathrm{rad}\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Gemini (Chile)</p></td>
+<td class="text-align:center"><p>8.1 m</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\( 0.08 \mu \mathrm{rad}\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Bolshoi (Russia)</p></td>
+<td class="text-align:center"><p>6 m</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\( 0.1 \mu \mathrm{rad}\)</span></p></td>
+<td class="text-align:center"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Mt. Wilson (California)</p></td>
+<td class="text-align:center"><p>1.5 m</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\( 0.4 \mu \mathrm{rad}\)</span></p></td>
+<td class="text-align:center"><p>1908</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Mt. Wilson (California)</p></td>
+<td class="text-align:center"><p>2.54 m</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(0.26 \mu \mathrm{rad}\)</span></p></td>
+<td class="text-align:center"><p>1917</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Mt. Wilson (California)</p></td>
+<td class="text-align:center"><p>5.08 m</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(0.13 \mu \mathrm{rad}\)</span></p></td>
+<td class="text-align:center"><p>1949</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Yerkes (Wisconsin)</p></td>
+<td class="text-align:center"><p>1.01 m</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(0.66 \mu \mathrm{rad}\)</span></p></td>
+<td class="text-align:center"><p>1895</p></td>
+</tr>
+</tbody>
+</table>
+<p>All of these telescopes would be limited to <span class="math notranslate nohighlight">\(\Delta \theta = 2.4 \mu \mathrm{rad}\)</span> or a diameter of 0.22 m or 8.7 in.</p>
+<p>Telescopes have a large diameter for greater light collection, rather than resolution.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="spectrometers.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">14. </span>Spectrometers</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="opticalprocessing.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">16. </span>Optical Processing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Dr. Stephen Schultz<br/>
+  
+      &copy; Copyright 2023.<br/>
+    <div class="extra_footer">
+      Brigham Young University
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
