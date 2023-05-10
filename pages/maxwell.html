@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. Maxwell’s Equations &#8212; Applied Electromagnetics and Optics</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -52,658 +63,391 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pages/maxwell';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Geometrical Optics" href="geometrical.html" />
-    <link rel="prev" title="Welcome to ECEN 661" href="../intro.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="prev" title="Introduction" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Applied Electromagnetics and Optics</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Part One
- </span>
-</p>
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part One</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   1. Maxwell’s Equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="geometrical.html">
-   2. Geometrical Optics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="prisms.html">
-   3. Prisms
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lenses.html">
-   4. Lenses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="cameras.html">
-   5. Cameras
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="principalplanes.html">
-   6. Principal Planes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="depthoffocus.html">
-   7. Depth of Focus
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="zoomlens.html">
-   8. Zoom Lenses and Afocals
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pupils.html">
-   9. Pupils
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Maxwell’s Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geometrical.html">2. Geometrical Optics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="prisms.html">3. Prisms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lenses.html">4. Lenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cameras.html">5. Cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principalplanes.html">6. Principal Planes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="depthoffocus.html">7. Depth of Focus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zoomlens.html">8. Zoom Lenses and Afocals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pupils.html">9. Pupils</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Part Two
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part Two</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="radiometry.html">
-   10. Radiometry
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="radiometry.html">10. Radiometry</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Part Three
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part Three</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="diffraction.html">
-   11. Diffraction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="fraunhofer.html">
-   12. Fraunhofer Approximation
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gratings.html">
-   13. Gratings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="spectrometers.html">
-   14. Spectrometers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="telescopes.html">
-   15. Telescopes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="opticalprocessing.html">
-   16. Optical Processing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="lensperformance.html">
-   17. Lens Performance
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="diffraction.html">11. Diffraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fraunhofer.html">12. Fraunhofer Approximation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gratings.html">13. Gratings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spectrometers.html">14. Spectrometers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="telescopes.html">15. Telescopes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opticalprocessing.html">16. Optical Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lensperformance.html">17. Lens Performance</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Problems
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Problems</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/geometrical.html">
-   Problem Set 1: Geometrical Optics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/lenses.html">
-   Problem Set 2: Lenses
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/camera.html">
-   Problem Set 3: Cameras
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/principalplanes.html">
-   Problem Set 4: Principal Planes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/humaneye.html">
-   Problem Set 5: The Human Eye
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/radiometry.html">
-   Problem Set 6: Radiometry
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/fields.html">
-   Problem Set 7: Fields
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/diffraction.html">
-   Problem Set 8: Diffraction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/gratings.html">
-   Problem Set 9: Gratings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/spectrometry.html">
-   Problem Set 10: Spectrometry
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/lensperformance.html">
-   Problem Set 11: Lens Performance
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/zoomlens.html">
-   Project 1: Camera Project
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../problems/laserdrilling.html">
-   Project 2: Laser Drilling Project
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/geometrical.html">Problem Set 1: Geometrical Optics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/lenses.html">Problem Set 2: Lenses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/camera.html">Problem Set 3: Cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/principalplanes.html">Problem Set 4: Principal Planes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/humaneye.html">Problem Set 5: The Human Eye</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/radiometry.html">Problem Set 6: Radiometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/fields.html">Problem Set 7: Fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/diffraction.html">Problem Set 8: Diffraction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/gratings.html">Problem Set 9: Gratings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/spectrometry.html">Problem Set 10: Spectrometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/lensperformance.html">Problem Set 11: Lens Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/zoomlens.html">Project 1: Camera Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problems/laserdrilling.html">Project 2: Laser Drilling Project</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Reference
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../reference/transforms.html">
-   Fourier Transforms
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../reference/glossary.html">
-   Glossary
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/transforms.html">Fourier Transforms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/glossary.html">Glossary</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/sms276/ece661" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/sms276/ece661/edit/master/book/pages/maxwell.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/sms276/ece661/issues/new?title=Issue%20on%20page%20%2Fpages/maxwell.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/pages/maxwell.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/sms276/ece661"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/sms276/ece661/issues/new?title=Issue%20on%20page%20%2Fpages/maxwell.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/sms276/ece661/edit/master/book/pages/maxwell.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/pages/maxwell.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maxwell-s-equations-in-vector-form">
-   1.1. Maxwell’s Equations in Vector Form
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-media">
-   1.2. Linear Media
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#isotropic-media">
-   1.3. Isotropic Media
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homogeneous-material">
-   1.4. Homogeneous Material
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solving-maxwell-s-equations">
-   1.5. Solving Maxwell’s Equations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#low-frequency-domain-quasi-static">
-     1.5.1. Low Frequency Domain (quasi-static)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resonant-domain">
-     1.5.2. Resonant Domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#high-frequency">
-     1.5.3. High Frequency
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wave-propagation">
-   1.6. Wave Propagation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scalar-vs-vector-wave-equation">
-   1.7. Scalar vs. Vector Wave Equation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#energy-flow">
-   1.8. Energy Flow
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#elementary-waves">
-   1.9. Elementary Waves
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plane-waves">
-     1.9.1. Plane Waves
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#spherical-waves">
-     1.9.2. Spherical Waves
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gaussian-waves">
-     1.9.3. Gaussian Waves
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wavefront">
-   1.10. Wavefront
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geometrical-optics">
-   1.11. Geometrical Optics
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Maxwell’s Equations</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maxwell-s-equations-in-vector-form">
-   1.1. Maxwell’s Equations in Vector Form
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#linear-media">
-   1.2. Linear Media
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#isotropic-media">
-   1.3. Isotropic Media
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homogeneous-material">
-   1.4. Homogeneous Material
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solving-maxwell-s-equations">
-   1.5. Solving Maxwell’s Equations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#low-frequency-domain-quasi-static">
-     1.5.1. Low Frequency Domain (quasi-static)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#resonant-domain">
-     1.5.2. Resonant Domain
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#high-frequency">
-     1.5.3. High Frequency
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wave-propagation">
-   1.6. Wave Propagation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#scalar-vs-vector-wave-equation">
-   1.7. Scalar vs. Vector Wave Equation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#energy-flow">
-   1.8. Energy Flow
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#elementary-waves">
-   1.9. Elementary Waves
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plane-waves">
-     1.9.1. Plane Waves
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#spherical-waves">
-     1.9.2. Spherical Waves
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gaussian-waves">
-     1.9.3. Gaussian Waves
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#wavefront">
-   1.10. Wavefront
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#geometrical-optics">
-   1.11. Geometrical Optics
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Maxwell’s Equations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-s-equations-in-vector-form">1.1. Maxwell’s Equations in Vector Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-media">1.2. Linear Media</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isotropic-media">1.3. Isotropic Media</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-material">1.4. Homogeneous Material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-maxwell-s-equations">1.5. Solving Maxwell’s Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#low-frequency-domain-quasi-static">1.5.1. Low Frequency Domain (quasi-static)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resonant-domain">1.5.2. Resonant Domain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-frequency">1.5.3. High Frequency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-propagation">1.6. Wave Propagation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-vs-vector-wave-equation">1.7. Scalar vs. Vector Wave Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-flow">1.8. Energy Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-waves">1.9. Elementary Waves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plane-waves">1.9.1. Plane Waves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spherical-waves">1.9.2. Spherical Waves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-waves">1.9.3. Gaussian Waves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wavefront">1.10. Wavefront</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrical-optics">1.11. Geometrical Optics</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="maxwell-s-equations">
-<h1><span class="section-number">1. </span>Maxwell’s Equations<a class="headerlink" href="#maxwell-s-equations" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">1. </span>Maxwell’s Equations<a class="headerlink" href="#maxwell-s-equations" title="Permalink to this heading">#</a></h1>
 <p>Each chapter should be preceded by an abstract (no more than 200 words) that
 summarizes the content. The abstract will appear \textit{online} at
 \url{<a class="reference external" href="http://www.SpringerLink.com">www.SpringerLink.com</a>} and be available with unrestricted access. This
@@ -714,7 +458,7 @@ source file of this chapter template \texttt{abstract}) and include them with
 the source files of your manuscript. Use the plain \texttt{abstract} command if
 the abstract is also to appear in the printed version of the book.</p>
 <section id="maxwell-s-equations-in-vector-form">
-<h2><span class="section-number">1.1. </span>Maxwell’s Equations in Vector Form<a class="headerlink" href="#maxwell-s-equations-in-vector-form" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.1. </span>Maxwell’s Equations in Vector Form<a class="headerlink" href="#maxwell-s-equations-in-vector-form" title="Permalink to this heading">#</a></h2>
 <p>We start with Maxwell’s equations:</p>
 <!-- 
 % \left.
@@ -751,7 +495,7 @@ and current source free media resulting in</p>
 <p>We often talk about linear, isotropic, and homogeneous (LIH) media.</p>
 </section>
 <section id="linear-media">
-<h2><span class="section-number">1.2. </span>Linear Media<a class="headerlink" href="#linear-media" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.2. </span>Linear Media<a class="headerlink" href="#linear-media" title="Permalink to this heading">#</a></h2>
 <p>In general, <span class="math notranslate nohighlight">\(\vec{P}\)</span> depends on the magnitude of <span class="math notranslate nohighlight">\(\vec{E}\)</span> as given
 by</p>
 <div class="math notranslate nohighlight" id="equation-maxwell9">
@@ -783,7 +527,7 @@ for within nolinear optics, however, include electro-optic modulators,
 wavelength converters, etc.</p>
 </section>
 <section id="isotropic-media">
-<h2><span class="section-number">1.3. </span>Isotropic Media<a class="headerlink" href="#isotropic-media" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.3. </span>Isotropic Media<a class="headerlink" href="#isotropic-media" title="Permalink to this heading">#</a></h2>
 <p>In general <span class="math notranslate nohighlight">\(\varepsilon _r\)</span> is a tensor (matrix) rather than a constant. The
 permittivity depends on the direction of the electric field.</p>
 <p>Propagation in these anisotropic materials will not be covered in this class.
@@ -791,7 +535,7 @@ Applications of anisotropic materials include polarization rotators, liquid
 crystals, etc.</p>
 </section>
 <section id="homogeneous-material">
-<h2><span class="section-number">1.4. </span>Homogeneous Material<a class="headerlink" href="#homogeneous-material" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.4. </span>Homogeneous Material<a class="headerlink" href="#homogeneous-material" title="Permalink to this heading">#</a></h2>
 <p>A homogeneous material has no spatial variations in the material. All material
 has spatial variation for example at the atomic level there is a nucleus and
 electron clouds, etc. The homogeneity is only important relative to the
@@ -804,17 +548,17 @@ non-homogeneous materials but we will look at propagation through homogeneous
 sections.</p>
 </section>
 <section id="solving-maxwell-s-equations">
-<h2><span class="section-number">1.5. </span>Solving Maxwell’s Equations<a class="headerlink" href="#solving-maxwell-s-equations" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.5. </span>Solving Maxwell’s Equations<a class="headerlink" href="#solving-maxwell-s-equations" title="Permalink to this heading">#</a></h2>
 <p>Solving Maxwell’s equations directly is very hard so we need to make simplifications.</p>
 <section id="low-frequency-domain-quasi-static">
-<h3><span class="section-number">1.5.1. </span>Low Frequency Domain (quasi-static)<a class="headerlink" href="#low-frequency-domain-quasi-static" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.5.1. </span>Low Frequency Domain (quasi-static)<a class="headerlink" href="#low-frequency-domain-quasi-static" title="Permalink to this heading">#</a></h3>
 <p>Spatial dimensions are much smaller than the wavelength.</p>
 <div class="math notranslate nohighlight" id="equation-maxwell12">
 <span class="eqno">(1.12)<a class="headerlink" href="#equation-maxwell12" title="Permalink to this equation">#</a></span>\[x, y, z \ll \lambda\]</div>
 <p>Since the wavelength of optical signals is <span class="math notranslate nohighlight">\(\sim 1 \mu m\)</span>, this domain is not feasible.</p>
 </section>
 <section id="resonant-domain">
-<h3><span class="section-number">1.5.2. </span>Resonant Domain<a class="headerlink" href="#resonant-domain" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.5.2. </span>Resonant Domain<a class="headerlink" href="#resonant-domain" title="Permalink to this heading">#</a></h3>
 <p>Spatial dimensions are on the order of the wavelength.</p>
 <ul class="simple">
 <li><p>Method of Moments (MOM)</p></li>
@@ -830,7 +574,7 @@ Telescope: 1m X 1m X 1m</p>
 <p>Dramatically different sizes.</p>
 </section>
 <section id="high-frequency">
-<h3><span class="section-number">1.5.3. </span>High Frequency<a class="headerlink" href="#high-frequency" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.5.3. </span>High Frequency<a class="headerlink" href="#high-frequency" title="Permalink to this heading">#</a></h3>
 <p>Spatial dimensions <span class="math notranslate nohighlight">\(\gg\)</span> wavelength.</p>
 <p>This is very applicable to optics.</p>
 <p>Broken into 2 parts: (1) physical optics, (2) geometrical optics</p>
@@ -848,7 +592,7 @@ Telescope: 1m X 1m X 1m</p>
 </section>
 </section>
 <section id="wave-propagation">
-<h2><span class="section-number">1.6. </span>Wave Propagation<a class="headerlink" href="#wave-propagation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.6. </span>Wave Propagation<a class="headerlink" href="#wave-propagation" title="Permalink to this heading">#</a></h2>
 <p>What we want to accomplish is to calculate the phase and amplitude of an
 optical wave at an arbitrary position after it has traveled through a set of
 optical components. The components can be apertures, lenses, gratings, etc.</p>
@@ -921,7 +665,7 @@ components. The wave equation can then be used as a scalar equation. Each
 component of the electric and the magnetic field can be treated separately.</p>
 </section>
 <section id="scalar-vs-vector-wave-equation">
-<h2><span class="section-number">1.7. </span>Scalar vs. Vector Wave Equation<a class="headerlink" href="#scalar-vs-vector-wave-equation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.7. </span>Scalar vs. Vector Wave Equation<a class="headerlink" href="#scalar-vs-vector-wave-equation" title="Permalink to this heading">#</a></h2>
 <p>Are the different vector component of the fields independent? If they are then
 the wave equation can be broken up into three independent equations. Let’s look
 at the the wave equation in the cartesian coordinate system. The scalar wave
@@ -955,7 +699,7 @@ treated as a scalar equation. You can get coupling between polarization
 components.</p>
 </section>
 <section id="energy-flow">
-<h2><span class="section-number">1.8. </span>Energy Flow<a class="headerlink" href="#energy-flow" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.8. </span>Energy Flow<a class="headerlink" href="#energy-flow" title="Permalink to this heading">#</a></h2>
 <p>The instantaneous power crossing a unit area is the Poynting vector <span class="math notranslate nohighlight">\(\vec{S}\)</span>
 as given by</p>
 <div class="math notranslate nohighlight" id="equation-maxwell29">
@@ -965,7 +709,7 @@ as given by</p>
 <span class="eqno">(1.31)<a class="headerlink" href="#equation-maxwell30" title="Permalink to this equation">#</a></span>\[\mathrm{Intensity} = I = \langle \vec{S} \rangle = \frac{1}{T} \int_0^T \vec{S} dt\]</div>
 </section>
 <section id="elementary-waves">
-<h2><span class="section-number">1.9. </span>Elementary Waves<a class="headerlink" href="#elementary-waves" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.9. </span>Elementary Waves<a class="headerlink" href="#elementary-waves" title="Permalink to this heading">#</a></h2>
 <p>There are a variety of complex fields that satisfy the time harmonic scalar
 wave equation. Some common notation is</p>
 <div class="math notranslate nohighlight" id="equation-maxwell31">
@@ -974,7 +718,7 @@ wave equation. Some common notation is</p>
     \vec{k} &amp;= k_x \hat{x} + k_y \hat{y} + k_z \hat{z}
 \end{align}\end{split}\]</div>
 <section id="plane-waves">
-<h3><span class="section-number">1.9.1. </span>Plane Waves<a class="headerlink" href="#plane-waves" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.9.1. </span>Plane Waves<a class="headerlink" href="#plane-waves" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The amplitude does not change with distance</p></li>
 <li><p>The phase is constant over a plane</p></li>
@@ -994,7 +738,7 @@ wave equation. Some common notation is</p>
 <span class="eqno">(1.38)<a class="headerlink" href="#equation-maxwell37" title="Permalink to this equation">#</a></span>\[\frac{ | \vec{E}_0 | }{ | \vec{H}_0 | } = \sqrt{ \frac{\mu}{\varepsilon} } = \frac{377}{n}\]</div>
 </section>
 <section id="spherical-waves">
-<h3><span class="section-number">1.9.2. </span>Spherical Waves<a class="headerlink" href="#spherical-waves" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.9.2. </span>Spherical Waves<a class="headerlink" href="#spherical-waves" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The field decreases with distance away from the focal point ar <span class="math notranslate nohighlight">\(1/r\)</span>.</p></li>
 <li><p>The phase is constant over a spherical surface</p></li>
@@ -1003,14 +747,14 @@ wave equation. Some common notation is</p>
 <span class="eqno">(1.39)<a class="headerlink" href="#equation-maxwell38" title="Permalink to this equation">#</a></span>\[\vec{E} = \frac{\vec{E}_0}{r} e ^{j k r}\]</div>
 </section>
 <section id="gaussian-waves">
-<h3><span class="section-number">1.9.3. </span>Gaussian Waves<a class="headerlink" href="#gaussian-waves" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">1.9.3. </span>Gaussian Waves<a class="headerlink" href="#gaussian-waves" title="Permalink to this heading">#</a></h3>
 <p>There is also a common solution to the paraxial wave equation.</p>
 <div class="math notranslate nohighlight" id="equation-maxwell39">
 <span class="eqno">(1.40)<a class="headerlink" href="#equation-maxwell39" title="Permalink to this equation">#</a></span>\[\vec{E} = \frac{\vec{E}_0}{r} e ^{j k z} e ^{j k \frac{x^2 + y^2}{2z}}\]</div>
 </section>
 </section>
 <section id="wavefront">
-<h2><span class="section-number">1.10. </span>Wavefront<a class="headerlink" href="#wavefront" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.10. </span>Wavefront<a class="headerlink" href="#wavefront" title="Permalink to this heading">#</a></h2>
 <p>A wavefront is a surface of equal phase. For a plane wave it is a plane and for
 a spherical wave it is a sphere. The separation between wavefronts is the
 wavelength of the optical signal.</p>
@@ -1023,7 +767,7 @@ another plane.</p>
 </dl>
 </section>
 <section id="geometrical-optics">
-<h2><span class="section-number">1.11. </span>Geometrical Optics<a class="headerlink" href="#geometrical-optics" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.11. </span>Geometrical Optics<a class="headerlink" href="#geometrical-optics" title="Permalink to this heading">#</a></h2>
 <p>In the geometrical optics approximation a ray is used to represents the normal
 to a wavefront. This is the high frequency limit. It ignores diffraction.</p>
 <p>Each ray corresponds to a bucket of power. The spread of the rays corresponds
@@ -1067,53 +811,128 @@ wavelength.</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to ECEN 661</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Introduction</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="geometrical.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="geometrical.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">2. </span>Geometrical Optics</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By Dr. Stephen Schultz<br/>
-  
-      &copy; Copyright 2023.<br/>
-    <div class="extra_footer">
-      Brigham Young University
-    </div>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwell-s-equations-in-vector-form">1.1. Maxwell’s Equations in Vector Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-media">1.2. Linear Media</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#isotropic-media">1.3. Isotropic Media</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homogeneous-material">1.4. Homogeneous Material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solving-maxwell-s-equations">1.5. Solving Maxwell’s Equations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#low-frequency-domain-quasi-static">1.5.1. Low Frequency Domain (quasi-static)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resonant-domain">1.5.2. Resonant Domain</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-frequency">1.5.3. High Frequency</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wave-propagation">1.6. Wave Propagation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scalar-vs-vector-wave-equation">1.7. Scalar vs. Vector Wave Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-flow">1.8. Energy Flow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elementary-waves">1.9. Elementary Waves</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plane-waves">1.9.1. Plane Waves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spherical-waves">1.9.2. Spherical Waves</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-waves">1.9.3. Gaussian Waves</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wavefront">1.10. Wavefront</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#geometrical-optics">1.11. Geometrical Optics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Stephen Schultz
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Brigham Young University
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
