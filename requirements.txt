@@ -4,3 +4,4 @@ sphinx-design ~= 0.3.0
 numpy
 scipy
 matplotlib
+pandas

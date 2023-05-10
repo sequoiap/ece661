@@ -11,6 +11,24 @@ logo: logo.png
 execute:
   execute_notebooks: force
 
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default!
+    - amsmath
+    - colon_fence
+    - dollarmath
+    - deflist
+    - linkify
+    - substitution
+    - tasklist
+    # - html_admonition
+    # - html_image
+    # - replacements
+    # - smartquotes
+  myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
+  myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
+
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
@@ -25,6 +43,9 @@ repository:
   url: https://github.com/sms276/ece661  # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
@@ -43,8 +64,6 @@ html:
   # footer_items:
 
 sphinx:
-#   config:
-#     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   extensions:
     - 'sphinx_design'
     - 'matplotlib.sphinxext.mathmpl'
@@ -54,21 +73,3 @@ sphinx:
     # html_css_files: []
     # templates_path: ['_templates']
     exclude_patterns: ['_build', 'Thumbs.db', '.DS_Store', "**.ipynb_checkpoints"]
-
-parse:
-  myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
-    - amsmath
-    - colon_fence
-    - dollarmath
-    - deflist
-    - linkify
-    - substitution
-    - tasklist
-    # - html_admonition
-    # - html_image
-    # - replacements
-    # - smartquotes
-  myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
-  myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
