@@ -43,6 +43,14 @@ Then open the URL http://localhost:8000 in a web browser.
 The book is also hosted on GitHub Pages at https://sms276.github.io/ece661/.
 It is automatically built on every commit to the master branch.
 
+By default, the book only builds the pages that have changed since the last
+build. To force a full rebuild, run
+
+```
+jb clean book
+jb build book
+```
+
 ## Writing
 
 The book is written in Jupyter notebooks. Jupyter notebooks support Markdown
