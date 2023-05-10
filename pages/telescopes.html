@@ -442,8 +442,8 @@ document.write(`
 </figure>
 <p>In Kepler telescopes, both <span class="math notranslate nohighlight">\(f_1\)</span> and <span class="math notranslate nohighlight">\(f_2\)</span> are positive lenses with the distance between them <span class="math notranslate nohighlight">\(D = f_1 + f_2\)</span>. Galilean telescopes, on the other hand, have <span class="math notranslate nohighlight">\(f_1\)</span> as a positive lens and <span class="math notranslate nohighlight">\(f_2\)</span> as a negative lens. The distance <span class="math notranslate nohighlight">\(D\)</span> between is still <span class="math notranslate nohighlight">\(D = f_1 + f_2\)</span>; in this case, however, the distance is shorter (since one of the lenses is negative).</p>
 <p>Since there is no focus, we will use angular magnification:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-34c3adea-d28f-4f8e-8da5-d8aca85b816e">
-<span class="eqno">(15.1)<a class="headerlink" href="#equation-34c3adea-d28f-4f8e-8da5-d8aca85b816e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-816f6a09-86fa-4a28-8db8-a5f9a1287c42">
+<span class="eqno">(15.1)<a class="headerlink" href="#equation-816f6a09-86fa-4a28-8db8-a5f9a1287c42" title="Permalink to this equation">#</a></span>\[\begin{equation}
     M_{ang} = \frac{\tan \theta '}{\tan \theta} = - \frac{F_1}{F_2}
 \end{equation}\]</div>
 <p>Modern astronomical telescopes are actually really large cameras. The goal of a
@@ -458,8 +458,8 @@ as a single perfect lens.</p>
 </figcaption>
 </figure>
 <p>At the focal plane:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dd1a2db2-3e16-4051-abc8-6493af3509de">
-<span class="eqno">(15.2)<a class="headerlink" href="#equation-dd1a2db2-3e16-4051-abc8-6493af3509de" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-88f049ac-e2ed-4f3b-9ef7-95d9112aa42e">
+<span class="eqno">(15.2)<a class="headerlink" href="#equation-88f049ac-e2ed-4f3b-9ef7-95d9112aa42e" title="Permalink to this equation">#</a></span>\[\begin{align}
     E(x,y) &amp;= \mathfrak{F} \left. \left\{ \mathrm{circ} \left( \frac{r}{D/2} \right) \right\} \right| _{f_r = r / \lambda f} \\
     &amp;= E_0 \left[ 2 \frac{J_1 ( 2 \pi \frac{D}{2} f_x )}{ 2 \pi \frac{D}{2} f_x } \right] \\
     &amp;= E_0 \left[ 2 \frac{J_1 ( 2 \pi \frac{D}{2} \frac{r}{\lambda f} )}{ 2 \pi \frac{D}{2} \frac{r}{\lambda f} } \right]
@@ -477,8 +477,8 @@ as a single perfect lens.</p>
 <section id="irradiance-pattern">
 <h2><span class="section-number">15.2. </span>Irradiance pattern<a class="headerlink" href="#irradiance-pattern" title="Permalink to this heading">#</a></h2>
 <p>The irradiance pattern is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-efb8eb5e-e9b1-4e3a-a0fd-7e452d391a4b">
-<span class="eqno">(15.3)<a class="headerlink" href="#equation-efb8eb5e-e9b1-4e3a-a0fd-7e452d391a4b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ba9a42c3-e0cd-47e0-af14-76b80c57aa30">
+<span class="eqno">(15.3)<a class="headerlink" href="#equation-ba9a42c3-e0cd-47e0-af14-76b80c57aa30" title="Permalink to this equation">#</a></span>\[\begin{equation}
     I = I_0 \left[ 2 \frac{ J_1 ( \pi D \frac{r}{\lambda f} ) }{ \pi D \frac{r}{\lambda f}  } \right] ^2
 \end{equation}\]</div>
 <div class="cell tag_hide-input docutils container">
@@ -520,8 +520,8 @@ as a single perfect lens.</p>
 \[ 
     \frac{\pi}{\lambda} \frac{D}{f} r = 3.832
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-d23bbde4-6ca9-4993-9a62-767800a034e8">
-<span class="eqno">(15.4)<a class="headerlink" href="#equation-d23bbde4-6ca9-4993-9a62-767800a034e8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-445baae3-1663-4bd6-9e01-fa107bf0f2ed">
+<span class="eqno">(15.4)<a class="headerlink" href="#equation-445baae3-1663-4bd6-9e01-fa107bf0f2ed" title="Permalink to this equation">#</a></span>\[\begin{align}
     r &amp;= 3.832 \frac{\lambda}{\pi} \frac{f}{D} \\
     &amp;= \frac{3.832}{\pi} \lambda \frac{f}{D} \\
     d = 2 r &amp;= 2 \left( \frac{3.832}{\pi} \right) \lambda f_\# \\
@@ -530,18 +530,18 @@ as a single perfect lens.</p>
 <p>This is called the Airy Disk.</p>
 <p>What if the incident beam has a different angle?</p>
 <p>Plane wave equation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b34b598e-1fe3-4061-b8ce-4521bf2adef2">
-<span class="eqno">(15.5)<a class="headerlink" href="#equation-b34b598e-1fe3-4061-b8ce-4521bf2adef2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3c21de16-de66-4b29-a8d6-b0bc5a1a49ea">
+<span class="eqno">(15.5)<a class="headerlink" href="#equation-3c21de16-de66-4b29-a8d6-b0bc5a1a49ea" title="Permalink to this equation">#</a></span>\[\begin{equation}
     E_i = \exp [ j k (\sin \theta y + \cos \theta z)]
 \end{equation}\]</div>
 <p>If we use <span class="math notranslate nohighlight">\(E_i = \exp [j k \sin \theta y] = \exp [j 2 \pi \frac{\sin \theta}{\lambda} y]\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-97ef5932-450c-46c2-bbba-619b476078a0">
-<span class="eqno">(15.6)<a class="headerlink" href="#equation-97ef5932-450c-46c2-bbba-619b476078a0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b06e7e24-c891-4843-a390-3a2f4f26c499">
+<span class="eqno">(15.6)<a class="headerlink" href="#equation-b06e7e24-c891-4843-a390-3a2f4f26c499" title="Permalink to this equation">#</a></span>\[\begin{equation}
     E(x, y) = \mathfrak{F} \left. \left\{ \exp[j k \sin \theta y] \mathrm{circ} \left( \frac{r}{D / 2} \right) \right\} \right| _{f_r = r / \lambda f} \\
 \end{equation}\]</div>
 <p>The pattern is the same; it is just shifted by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf572856-cbd3-4384-a227-fd073f302c7d">
-<span class="eqno">(15.7)<a class="headerlink" href="#equation-cf572856-cbd3-4384-a227-fd073f302c7d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-99b15031-e5aa-4138-9824-33c350d83ca0">
+<span class="eqno">(15.7)<a class="headerlink" href="#equation-99b15031-e5aa-4138-9824-33c350d83ca0" title="Permalink to this equation">#</a></span>\[\begin{align}
     f_{x0} &amp;= \frac{\sin \theta}{y} \\
     \frac{y_0}{\lambda f} &amp;= \frac{\sin \theta}{\lambda} \\
     y_0 &amp;= \sin \theta f \approx \theta f
@@ -554,14 +554,14 @@ as a single perfect lens.</p>
 <dt>Rayleigh Criteria</dt><dd><p>Two incoherent point sources are “barely resolved” by a diffraction-limited system with a circular aperture when the center of the Airy disk of one point falls exactly on the first zero of the diffraction pattern.</p>
 </dd>
 </dl>
-<div class="amsmath math notranslate nohighlight" id="equation-4844cc73-e722-4a26-ab60-bc7985401f95">
-<span class="eqno">(15.8)<a class="headerlink" href="#equation-4844cc73-e722-4a26-ab60-bc7985401f95" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ee8313df-841c-4da8-99cd-05692ed64438">
+<span class="eqno">(15.8)<a class="headerlink" href="#equation-ee8313df-841c-4da8-99cd-05692ed64438" title="Permalink to this equation">#</a></span>\[\begin{align}
     \pi D \frac{r}{\lambda f} &amp;= 3.83 \\  
     r &amp;= 1.22 \lambda \frac{f}{D} \\
 \end{align}\]</div>
 <p>So, the resolvable separation is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-20766df0-1601-40b1-b616-72a4739d45d3">
-<span class="eqno">(15.9)<a class="headerlink" href="#equation-20766df0-1601-40b1-b616-72a4739d45d3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4922f75c-7dc4-4c05-90a2-9c58655755c1">
+<span class="eqno">(15.9)<a class="headerlink" href="#equation-4922f75c-7dc4-4c05-90a2-9c58655755c1" title="Permalink to this equation">#</a></span>\[\begin{align}
     1.22 \lambda \frac{f}{D} &amp;= f \theta \\
     \theta &amp;= 1.22 \frac{\lambda}{D}
 \end{align}\]</div>
@@ -578,14 +578,14 @@ Higher turbulence: <span class="math notranslate nohighlight">\(\theta \geq 2 \m
 \[
     0.5 \mathrm{arcseconds} = (0.5) \frac{2 \pi \mathrm{rad}}{360 * 60 * 60} = 2.424 \mu mathrm{rad}
 \]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-84da4268-4284-4e88-848e-b4bb20280b33">
-<span class="eqno">(15.10)<a class="headerlink" href="#equation-84da4268-4284-4e88-848e-b4bb20280b33" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-77c374ae-b59d-4f0f-a9cb-02345c0aaa23">
+<span class="eqno">(15.10)<a class="headerlink" href="#equation-77c374ae-b59d-4f0f-a9cb-02345c0aaa23" title="Permalink to this equation">#</a></span>\[\begin{align}
     2.424 \times 10^-6 &amp;= \frac{550 \times 10^{-9}}{D} \\
     D &amp;= 0.22 m
 \end{align}\]</div>
 <p>At high turbulence:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c879d68c-330a-441e-8c88-b9ed2805b604">
-<span class="eqno">(15.11)<a class="headerlink" href="#equation-c879d68c-330a-441e-8c88-b9ed2805b604" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1966d772-4541-4980-83d9-ac676e98acc8">
+<span class="eqno">(15.11)<a class="headerlink" href="#equation-1966d772-4541-4980-83d9-ac676e98acc8" title="Permalink to this equation">#</a></span>\[\begin{align}
     D = \frac{550 \times 10^{-9}}{\frac{(2)(2 \pi)}{360 \cdot 60 \cdot 60}} = 0.0567 m
 \end{align}\]</div>
 <p>Some existing telescopes:</p>
