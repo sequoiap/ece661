@@ -1,4 +1,4 @@
-# Table of contents
+# Table of pagess
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
@@ -7,47 +7,47 @@ parts:
 - caption: Part One
   numbered: true
   chapters:
-  - file: content/part1/maxwell
-  - file: content/part1/geometrical
-  - file: content/part1/prisms
-  - file: content/part1/lenses
-  - file: content/part1/cameras
-  - file: content/part1/principalplanes
-  - file: content/part1/depthoffocus
-  - file: content/part1/zoomlens
-  - file: content/part1/pupils
+  - file: pages/maxwell
+  - file: pages/geometrical
+  - file: pages/prisms
+  - file: pages/lenses
+  - file: pages/cameras
+  - file: pages/principalplanes
+  - file: pages/depthoffocus
+  - file: pages/zoomlens
+  - file: pages/pupils
 - caption: Part Two
   numbered: true
   chapters:
-  - file: content/part2/radiometry
+  - file: pages/radiometry
 - caption: Part Three
   numbered: true
   chapters: 
-  - file: content/part3/diffraction
-  - file: content/part3/fraunhofer
-  - file: content/part3/gratings
-  - file: content/part3/spectrometers
-  - file: content/part3/telescopes
-  - file: content/part3/opticalprocessing
-  - file: content/part3/lensperformance
+  - file: pages/diffraction
+  - file: pages/fraunhofer
+  - file: pages/gratings
+  - file: pages/spectrometers
+  - file: pages/telescopes
+  - file: pages/opticalprocessing
+  - file: pages/lensperformance
 - caption: Problems
   numbered: false
   chapters: 
-  - file: content/problems/geometrical
-  - file: content/problems/lenses
-  - file: content/problems/camera
-  - file: content/problems/principalplanes
-  - file: content/problems/humaneye
-  - file: content/problems/radiometry
-  - file: content/problems/fields
-  - file: content/problems/diffraction
-  - file: content/problems/gratings
-  - file: content/problems/spectrometry
-  - file: content/problems/lensperformance
-  - file: content/problems/zoomlens
-  - file: content/problems/laserdrilling
+  - file: problems/geometrical
+  - file: problems/lenses
+  - file: problems/camera
+  - file: problems/principalplanes
+  - file: problems/humaneye
+  - file: problems/radiometry
+  - file: problems/fields
+  - file: problems/diffraction
+  - file: problems/gratings
+  - file: problems/spectrometry
+  - file: problems/lensperformance
+  - file: problems/zoomlens
+  - file: problems/laserdrilling
 - caption: Reference
   numbered: false
   chapters: 
-  - file: content/reference/transforms
-  - file: content/reference/glossary
+  - file: reference/transforms
+  - file: reference/glossary

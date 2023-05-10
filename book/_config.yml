@@ -3,7 +3,7 @@
 
 title: Applied Electromagnetics and Optics
 author: Dr. Stephen Schultz
-copyright: "2022"
+copyright: "2023"
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -22,19 +22,38 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
+  url: https://github.com/sms276/ece661  # Online location of your book
+  path_to_book: book  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+# HTML-specific settings
 html:
-  use_issues_button: true
-  use_repository_button: true
+  # favicon                   : ""  # A path to a favicon image
+  use_edit_page_button      : true  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : true  # Whether to add a link to your repository button
+  use_issues_button         : true  # Whether to add an "open an issue" button
+  # use_multitoc_numbering    : true   # Continuous numbering across parts/chapters
+  extra_footer              : "Brigham Young University"  # Will be displayed underneath the footer.
+  # google_analytics_id       : ""  # A GA id that can be used to track book views.
+  home_page_in_navbar       : false  # Whether to include your home page in the left Navigation Bar
+  # baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  # announcement              : "" # A banner announcement at the top of the site.
+  # footer_items:
 
 sphinx:
+#   config:
+#     mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  extensions:
+    - 'sphinx_design'
+    - 'matplotlib.sphinxext.mathmpl'
+    - 'matplotlib.sphinxext.plot_directive'
   config:
-    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    html_static_path: ['_static']
+    # html_css_files: []
+    # templates_path: ['_templates']
+    exclude_patterns: ['_build', 'Thumbs.db', '.DS_Store', "**.ipynb_checkpoints"]
 
 parse:
   myst_enable_extensions:
@@ -47,3 +66,9 @@ parse:
     - linkify
     - substitution
     - tasklist
+    # - html_admonition
+    # - html_image
+    # - replacements
+    # - smartquotes
+  myst_url_schemes: [mailto, http, https] # URI schemes that will be recognised as external URLs in Markdown links
+  myst_dmath_double_inline: true  # Allow display math ($$) within an inline context
