@@ -1,4 +1,6 @@
-# Welcome to ECEN 661
+# Introduction
+
+Welcome to ECEN 661!
 
 This site contains the course notes, assignments, and selected solutions for
 ECEN 661: Applied Electromagnetics and Optics.
