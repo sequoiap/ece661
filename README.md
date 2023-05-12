@@ -2,6 +2,8 @@
 
 Course notes for ECEN 661 Applied EM and Optics at BYU, by Dr. Stephen Schultz.
 
+Read it online: https://sms276.github.io/ece661/
+
 ## Installation
 
 To install the software needed to build the book, run (from the command line):
