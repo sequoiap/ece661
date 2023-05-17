@@ -70,3 +70,25 @@ For theme configuration options, see
 * https://sphinx-book-theme.readthedocs.io/en/stable/index.html
 
 Some example files and notebooks can be found under ``/examples``.
+
+To add content, create a new notebook file under ``/book/pages``. Be sure to
+then include it in the ``_toc.yml`` file under ``/book``. The order of the
+files in ``_toc.yml`` determines the order of the pages in the book. The first
+level heading in the notebook will be used as the page title and appear in the
+table of contents.
+
+Images can be added to the book by placing them in the ``/book/_static/images``
+directory. After committing, they will have a permalink assigned by GitHub.
+You can then include the images in the notebook by referencing that permalink:
+
+```
+![](link-to-github-image-here)
+```
+
+Doing it this way ensures the images are still visible when the individual
+pages are downloaded from the static website.
+
+Example projects you can reference that use the JupyterBook format:
+
+* https://byucamacholab.github.io/nonlinear-optics/
+* https://byucamacholab.github.io/Photonics-Bootcamp/

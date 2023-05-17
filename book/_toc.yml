@@ -4,6 +4,9 @@
 format: jb-book
 root: intro
 parts:
+- caption: Background
+  chapters:
+  - file: pages/background
 - caption: Part One
   numbered: true
   chapters:
